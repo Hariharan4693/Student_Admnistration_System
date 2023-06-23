@@ -1,0 +1,78 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+    Welcome to Students Administration System
+</mat-toolbar>
+  
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+    />
+
+    <p class="designation" style="font-size:25px; color: white; margin-top: 10px;">Welcome</p>
+    <h5 class="name">{{Email}}</h5>
+  
+    <mat-divider></mat-divider>
+        
+    <button mat-button class="menu-button" routerLink="/Dashboard" >
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <mat-divider></mat-divider>
+    <p class="designation" style="font-size:20px; color: red; margin-top: 10px;">STORING</p>
+    <button mat-button class="menu-button" routerLink="/create"  >
+      <mat-icon>person</mat-icon>
+      <span> Info</span>
+    </button>
+
+
+    <button mat-button class="menu-button" routerLink="/cmarks"  >
+      <mat-icon>create</mat-icon>
+      <span>Marks</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/cfees" >
+      <mat-icon>info</mat-icon>
+      <span>fees</span>
+    </button>
+     <mat-divider></mat-divider>
+
+     <p class="designation" style="font-size:20px; color: red; margin-top: 10px;">RETRIEVING</p>
+
+    <button mat-button class="menu-button" routerLink="/read"  >
+      <mat-icon>person</mat-icon>
+      <span>Info</span>
+    </button>
+  
+    <button mat-button class="menu-button" routerLink="/rmarks"  >
+      <mat-icon>create</mat-icon>
+      <span>Marks</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/rfees" >
+      <mat-icon>info</mat-icon>
+      <span>fees</span>
+    </button>
+  
+    <mat-divider></mat-divider>
+  
+    <button mat-button class="menu-button" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Log out</span>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8" >
+      <div class="background">
+        <img src="assets/background.png.png"/>
+      </div>
+        
+
+      
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
